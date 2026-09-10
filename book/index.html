@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W3DHQGTQ');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Private Transfer | Malaga VIP Transfers</title>
+  <meta name="description" content="Request a private car transfer with Malaga VIP Transfers. Airport pickups, drop-offs, intercity and hourly hire across Malaga and the Costa del Sol.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://malagaviptransfers.com/book/">
+  <meta property="og:title" content="Book a Private Transfer — Malaga VIP Transfers">
+  <meta property="og:description" content="Request a private car transfer. Airport pickups, intercity and hourly hire across the Costa del Sol.">
+  <meta property="og:url" content="https://malagaviptransfers.com/book/">
+  <meta property="og:image" content="https://malagaviptransfers.com/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://malagaviptransfers.com/assets/images/og-image.jpg">
+  <meta name="theme-color" content="#06060F">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+  body { background: var(--void); }
+
+  /* Page hero — keep same dark style */
+  .book-hero {
+    background: var(--panel);
+    border-bottom: 1px solid rgba(201,168,76,.12);
+    padding: 72px 32px 56px;
+  }
+  .book-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .book-hero h1 {
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    color: var(--ivory); margin-top: 18px; line-height: 1.1;
+  }
+  .book-hero p { color: var(--ivory-dim); font-size: .92rem; max-width: 520px; margin-top: 12px; line-height: 1.75; }
+
+  /* ── 2-COLUMN LAYOUT: Form + Sticky Price ───── */
+  .book-layout {
+    max-width: 1200px; margin: 0 auto; padding: 48px 32px 80px;
+    display: grid; grid-template-columns: 1fr 340px; gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 1000px) {
+    .book-layout { grid-template-columns: 1fr; }
+  }
+
+  /* Dark form card */
+  .form-card-dark {
+    background: var(--panel);
+    border-radius: var(--r-lg);
+    border-top: 2px solid var(--gold);
+    padding: 44px;
+    box-shadow: 0 12px 60px rgba(0,0,0,.35);
+  }
+  @media (max-width: 600px) {
+    .form-card-dark { padding: 26px 18px; }
+    .book-layout { padding: 28px 20px 60px; }
+  }
+
+  /* ── STICKY PRICE SIDEBAR ───── */
+  .price-sidebar {
+    position: sticky; top: 92px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .price-card {
+    background: var(--panel);
+    border-radius: var(--r-lg);
+    border-top: 2px solid var(--gold);
+    padding: 28px;
+    box-shadow: 0 12px 60px rgba(0,0,0,.35);
+  }
+  .price-card-title {
+    font-size: 0.56rem; font-weight: 800;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .price-value {
+    font-family: var(--serif);
+    font-size: 2.8rem; font-weight: 300;
+    color: var(--ivory); margin-bottom: 4px;
+    transition: all .3s ease;
+  }
+  .price-value.updating {
+    animation: pricePulse .4s ease;
+  }
+  .price-value--pending {
+    font-family: var(--sans);
+    font-size: 1.3rem; font-weight: 600;
+    color: var(--gold);
+  }
+  @keyframes pricePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); color: var(--gold); }
+    100% { transform: scale(1); }
+  }
+  .price-subtitle {
+    font-size: 0.72rem; color: var(--ivory-dim); margin-bottom: 20px;
+  }
+  .price-subtitle--gold {
+    color: var(--gold); font-weight: 600;
+  }
+  .price-detail-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+    font-size: 0.82rem;
+  }
+  .price-detail-row:last-child { border-bottom: none; }
+  .price-detail-label { color: var(--ivory-dim); }
+  .price-detail-value { font-weight: 600; color: var(--ivory); }
+
+  /* Vehicle preview in sidebar */
+  .vehicle-preview {
+    background: var(--panel);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: 0 12px 60px rgba(0,0,0,.35);
+  }
+  .vehicle-preview-img {
+    width: 100%; height: 180px;
+    object-fit: cover; object-position: center;
+    display: block;
+    transition: opacity .3s ease;
+  }
+  .vehicle-preview-info {
+    padding: 20px 24px;
+  }
+  .vehicle-preview-name {
+    font-family: var(--serif); font-size: 1.2rem;
+    color: var(--ivory); margin-bottom: 4px;
+  }
+  .vehicle-preview-specs {
+    font-size: 0.72rem; color: var(--ivory-dim);
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  .vehicle-preview-specs span { display: flex; align-items: center; gap: 4px; }
+
+  @media (max-width: 1000px) {
+    .price-sidebar {
+      position: static;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+  }
+  @media (max-width: 600px) {
+    .price-sidebar { grid-template-columns: 1fr; }
+  }
+
+  /* ── STICKY PRICE SIDEBAR SCROLL (desktop only) ─────
+     The form itself scrolls normally with the page. Only the price/
+     vehicle sidebar gets its own independent scroll, so it can stay
+     pinned in view while the (long) form scrolls underneath it. */
+  @media (min-width: 1001px) {
+    .price-sidebar {
+      max-height: calc(100vh - 112px);
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+    }
+  }
+
+  /* Section label */
+  .fsec {
+    font-size: 0.56rem; font-weight: 800;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--gold);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201,168,76,.2);
+    margin-top: 32px; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .fsec:first-child { margin-top: 0; }
+  .fsec-num {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem; font-weight: 800; color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* Transfer type tabs (like booking panel) */
+  .type-tabs {
+    display: flex; flex-wrap: wrap; gap: 0;
+    border: 1px solid rgba(201,168,76,.2);
+    border-radius: var(--r); overflow: hidden;
+  }
+  .type-tab {
+    flex: 1; min-width: 140px;
+    padding: 12px 10px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid rgba(201,168,76,.2);
+    font-family: var(--sans);
+    font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+    cursor: pointer; transition: all .2s;
+    text-align: center;
+  }
+  .type-tab:last-child { border-right: none; }
+  .type-tab:hover { color: rgba(255,255,255,.75); }
+  .type-tab.active {
+    background: rgba(201,168,76,.12);
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+  }
+
+  /* Intracity note */
+  .intracity-note {
+    display: none;
+    margin-top: 14px; padding: 14px 18px;
+    background: rgba(201,168,76,.07);
+    border-left: 2px solid var(--gold);
+    border-radius: var(--r);
+    font-size: .82rem; color: var(--ivory-dim); line-height: 1.65;
+  }
+
+  /* Grid layouts */
+  .fg2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; }
+  .fg3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px 28px; }
+  @media (max-width: 600px) { .fg2, .fg3 { grid-template-columns: 1fr; } }
+
+  /* Reassurance pills */
+  .reassure-bar {
+    display: flex; flex-wrap: wrap; gap: 20px;
+    justify-content: center; margin-bottom: 36px;
+  }
+  .reassure-pill {
+    display: flex; align-items: center; gap: 8px;
+    font-size: .68rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--ivory-dim);
+  }
+  .reassure-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+
+  /* Privacy note */
+  .privacy-note {
+    font-size: .72rem; color: rgba(255,255,255,.35);
+    line-height: 1.65; margin-top: 20px;
+  }
+  .privacy-note a { color: rgba(201,168,76,.7); }
+  .privacy-note a:hover { color: var(--gold); }
+
+  /* ── VEHICLE SELECTOR CARDS ───── */
+  .vehicle-options {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    margin-top: 12px;
+  }
+  .vehicle-opt {
+    border: 1.5px solid rgba(255,255,255,.1);
+    border-radius: var(--r-lg);
+    overflow: hidden; cursor: pointer;
+    transition: all .25s var(--ease);
+    position: relative;
+  }
+  .vehicle-opt:hover { border-color: rgba(201,168,76,.3); }
+  .vehicle-opt.selected {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold), 0 4px 20px rgba(201,168,76,.2);
+  }
+  .vehicle-opt-img {
+    width: 100%; height: 100px; object-fit: cover;
+    display: block; filter: brightness(.85);
+    transition: filter .3s;
+  }
+  .vehicle-opt.selected .vehicle-opt-img { filter: brightness(1); }
+  .vehicle-opt-img--coach { object-position: center 78%; }
+  .vehicle-opt-info { padding: 10px 12px; }
+  .vehicle-opt-name {
+    font-size: 0.7rem; font-weight: 700; color: var(--ivory);
+    margin-bottom: 2px; letter-spacing: .02em;
+  }
+  .vehicle-opt-meta {
+    font-size: 0.6rem; color: var(--ivory-dim);
+    display: flex; gap: 8px;
+  }
+  .vehicle-opt-check {
+    position: absolute; top: 8px; right: 8px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--gold); display: none;
+    align-items: center; justify-content: center;
+  }
+  .vehicle-opt.selected .vehicle-opt-check { display: flex; }
+  .vehicle-opt input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+  
+  @media (max-width: 600px) {
+    .vehicle-options { grid-template-columns: 1fr; }
+    .vehicle-opt-img { height: auto !important; aspect-ratio: 16/9; }
+  }
+</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Private Car Transfer Booking",
+    "provider": {"@id":"https://malagaviptransfers.com/#organization"},
+    "areaServed": {"@type": "Place", "name": "Malaga, Costa del Sol, Andalusia"}
+  }
+  </script>
+<link rel="alternate" hreflang="en" href="https://malagaviptransfers.com/book/"/>
+<link rel="alternate" hreflang="x-default" href="https://malagaviptransfers.com/book/"/>
+<link rel="preload" href="/assets/css/style.css" as="style"/>
+
+
+
+
+
+<style id="seo-critical-css">
+/* ═══ STATIC HEADER / FOOTER (SEO Critical CSS) ═══ */
+.hdr { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: transparent; border-bottom: 1px solid transparent; transition: background .35s ease, border-color .35s ease, backdrop-filter .35s; }
+.hdr.scrolled { background: rgba(6,6,15,.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom-color: rgba(201,168,76,.12); }
+.hdr-inner { max-width: 1440px; margin: 0 auto; padding: 0 5%; height: 76px; display: flex; align-items: center; gap: 36px; }
+.hdr-logo img { height: 64px; width: auto; }
+.hdr-nav { flex: 1; display: flex; list-style: none; gap: 0; }
+.hdr-nav a { display: block; padding: 8px 13px; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,.68); transition: color .2s; }
+.hdr-nav a:hover, .hdr-nav a.active { color: #C9A84C; }
+.hdr-cta { flex-shrink: 0; }
+.hdr-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 8px; margin-left: auto; }
+.hdr-burger span { display: block; width: 22px; height: 1.5px; background: rgba(255,255,255,.85); transition: all .25s; }
+
+.ftr { background: #06060F; border-top: 1px solid rgba(201,168,76,.12); }
+.ftr-top { max-width: 1440px; margin: 0 auto; padding: 64px 5% 48px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; }
+.ftr-brand img { height: 120px; margin-bottom: 20px; }
+.ftr-brand p { font-size: 0.78rem; color: rgba(255,255,255,.38); line-height: 1.75; max-width: 220px; }
+.ftr-col h5 { font-size: 0.58rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #C9A84C; margin-bottom: 18px; }
+.ftr-links { list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0; }
+.ftr-links a { text-decoration: none; font-size: 0.78rem; color: rgba(255,255,255,.4); transition: color .2s; }
+.ftr-links a:hover { color: #FFF8E7; }
+.ftr-contact-row { font-size: 0.78rem; color: rgba(255,255,255,.4); margin-bottom: 8px; }
+.ftr-contact-row a { text-decoration: none; color: rgba(255,255,255,.4); transition: color .2s; }
+.ftr-contact-row a:hover { color: #FFF8E7; }
+.ftr-bottom { max-width: 1440px; margin: 0 auto; padding: 20px 5%; border-top: 1px solid rgba(255,255,255,.06); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.ftr-bottom p { font-size: 0.7rem; color: rgba(255,255,255,.26); margin: 0; }
+.ftr-bottom-links a { text-decoration: none; font-size: 0.7rem; color: rgba(255,255,255,.26); margin-left: 20px; transition: color .2s; }
+.ftr-bottom-links a:hover { color: #C9A84C; }
+
+@media (max-width: 900px) {
+  .hdr-nav, .hdr-cta { display: none !important; }
+  .hdr-burger { display: flex; margin-left: 12px; flex-shrink: 0; }
+  .hdr-lang { flex-shrink: 0; }
+  .hdr-inner { justify-content: space-between; gap: 8px; }
+  .hdr-logo { flex: 1; }
+  .hdr-logo img { height: 40px; }
+}
+@media (max-width: 860px) { .ftr-top { grid-template-columns: 1fr 1fr; gap: 36px 28px; } }
+@media (max-width: 480px) { .ftr-top { grid-template-columns: 1fr; } }
+</style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yfinoka6u0");
+</script>
+<!-- End Microsoft Clarity -->
+</head>
+<body class="has-hero">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3DHQGTQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="hdr" id="siteHdr">
+  <div class="hdr-inner">
+    <a href="/" class="hdr-logo" aria-label="Malaga VIP Transfers">
+      <img src="/assets/images/logo-light.svg" alt="Malaga VIP Transfers" width="220" height="64"/>
+    </a>
+    <nav aria-label="Main"><ul class="hdr-nav"><li><a href="/services/">Services</a></li><li><a href="/destinations/">Destinations</a></li><li><a href="/blog/">Blog</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></nav>
+    <a href="/book/" class="btn btn-gold hdr-cta" style="padding:12px 22px;font-size:.64rem">Book a Transfer</a>
+    <button class="hdr-burger" id="hdrBurger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav"><a href="/services/">Services</a><a href="/destinations/">Destinations</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/book/" class="btn btn-gold">Book a Transfer</a></nav>
+
+
+<div class="book-hero">
+  <div class="book-hero-inner">
+    <nav class="breadcrumb">
+      <a href="/">Home</a><span class="breadcrumb-sep">/</span><span>Book</span>
+    </nav>
+    <h1>Request a Transfer</h1>
+    <p>Fill in your journey details below. We will review your request and send you a confirmed price before your travel date.</p>
+  </div>
+</div>
+
+<div class="book-layout">
+
+  <!-- ═══ LEFT: FORM ═══ -->
+  <div class="book-form-col">
+    <div class="reassure-bar">
+      <span class="reassure-pill"><span class="reassure-dot"></span>Private vehicle for your party</span>
+      <span class="reassure-pill"><span class="reassure-dot"></span>Price confirmed before travel</span>
+      <span class="reassure-pill"><span class="reassure-dot"></span>Professional licensed drivers</span>
+      <span class="reassure-pill"><span class="reassure-dot"></span>Available 24 hours every day</span>
+    </div>
+
+    <form class="form-card-dark" id="bookForm" novalidate>
+
+      <!-- YOUR DETAILS -->
+      <p class="fsec"><span class="fsec-num">1</span>Your Details</p>
+      <div class="fg2">
+        <div class="bk-field">
+          <label class="bk-label" for="f_name">Full Name *</label>
+          <input class="bk-input" id="f_name" name="full_name" type="text"
+                 required autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" for="f_email">Email Address *</label>
+          <input class="bk-input" id="f_email" name="email" type="email"
+                 required autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" id="f_phoneLbl">Phone Number (WhatsApp preferred) *</label>
+          <div class="phone-field" data-phone-field>
+            <div class="phone-code">
+              <input class="bk-input phone-code-input" type="text" autocomplete="off" spellcheck="false"
+                     placeholder="Country" aria-label="Country code">
+              <div class="bk-autocomplete phone-code-drop" role="listbox" aria-label="Select country code"></div>
+            </div>
+            <input class="bk-input phone-number" id="f_phone" type="tel" inputmode="tel"
+                   required autocomplete="tel" placeholder="Phone number" aria-labelledby="f_phoneLbl">
+            <input type="hidden" class="phone-combined" name="phone">
+          </div>
+        </div>
+      </div>
+
+      <!-- TRANSFER TYPE -->
+      <p class="fsec"><span class="fsec-num">2</span>Transfer Type</p>
+      <div class="type-tabs" role="tablist">
+        <button type="button" class="type-tab active" data-tt="pickup"    role="tab" aria-selected="true" >Airport Pickup</button>
+        <button type="button" class="type-tab"        data-tt="dropoff"   role="tab" aria-selected="false">Airport Drop-off</button>
+        <button type="button" class="type-tab"        data-tt="intercity" role="tab" aria-selected="false">Intercity Transfer</button>
+        <button type="button" class="type-tab"        data-tt="intracity" role="tab" aria-selected="false">Hourly Hire</button>
+      </div>
+      <input type="hidden" name="transfer_type" id="hiddenType" value="pickup">
+      <div class="intracity-note" id="intracityNote">
+        Hourly hire is priced per hour (minimum 4 hours). Your driver will be at your disposal for the agreed duration. Specify any preferred stops or requirements in the notes below.
+      </div>
+
+      <!-- JOURNEY DETAILS -->
+      <p class="fsec"><span class="fsec-num">3</span>Journey Details</p>
+
+      <!-- Destination row (pickup / dropoff / intercity) -->
+      <div class="fg2" id="destRow">
+        <div class="bk-field">
+          <label class="bk-label" for="f_from">Pickup Location *</label>
+          <input class="bk-input" id="f_from" name="pickup_location" type="text"
+                 autocomplete="off" spellcheck="false" placeholder="Malaga Airport (AGP)"
+                 data-autocomplete="fFromDrop" data-suggestions="destinations" required>
+          <div class="bk-autocomplete" id="fFromDrop" role="listbox" aria-label="Select pickup location"></div>
+          <p class="field-note" id="f_fromNote">Price will be confirmed manually for this route.</p>
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" for="f_to">Destination *</label>
+          <input class="bk-input" id="f_to" name="destination" type="text"
+                 autocomplete="off" spellcheck="false" placeholder="City, hotel or address"
+                 data-autocomplete="fToDrop" data-suggestions="destinations" required>
+          <div class="bk-autocomplete" id="fToDrop" role="listbox" aria-label="Select destination"></div>
+          <p class="field-note" id="f_toNote">Price will be confirmed manually for this route.</p>
+        </div>
+      </div>
+      
+      <!-- TOLL OPTION ROW (Hidden by default) -->
+      <div class="fg2" id="tollRow" style="display:none; margin-top:20px;">
+        <div class="bk-field" style="grid-column: 1 / -1;">
+          <label class="bk-label" id="f_tollLbl">Toll Road Preference</label>
+          <div class="cs-wrap" data-customselect tabindex="0" role="combobox" aria-haspopup="listbox"
+              aria-expanded="false" aria-labelledby="f_tollLbl">
+            <div class="cs-display" aria-live="polite"></div>
+            <select class="cs-native" id="f_toll" name="toll_preference" tabindex="-1" aria-hidden="true">
+              <option value="none" selected>No Toll Road (Standard Route)</option>
+              <option value="calahonda">AP-7 Calahonda Toll (Faster)</option>
+              <option value="marbella">AP-7 Marbella Toll (Faster)</option>
+              <option value="estepona">AP-7 Estepona Toll (Faster)</option>
+            </select>
+            <div class="cs-drop" role="listbox" aria-label="Select toll road preference"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hourly hire row (intracity) — start + end location + duration.
+           No return-journey concept here: the driver stays with you for
+           the whole booking, so there's no separate "there and back". -->
+      <div class="fg3" id="hoursRow" style="display:none">
+        <div class="bk-field" style="position:relative">
+          <label class="bk-label" for="f_from_ic">Starting Location *</label>
+          <input class="bk-input" id="f_from_ic" name="pickup_location" type="text"
+                 autocomplete="off" spellcheck="false" placeholder="Where shall your driver meet you?"
+                 data-autocomplete="fFromIcDrop" required>
+          <div class="bk-autocomplete" id="fFromIcDrop" role="listbox"></div>
+        </div>
+        <div class="bk-field" style="position:relative">
+          <label class="bk-label" for="f_to_ic">Ending Location</label>
+          <input class="bk-input" id="f_to_ic" name="hire_end_location" type="text"
+                 autocomplete="off" spellcheck="false" placeholder="Where should the hire end?"
+                 data-autocomplete="fToIcDrop">
+          <div class="bk-autocomplete" id="fToIcDrop" role="listbox"></div>
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" for="f_hours">Duration *</label>
+          <input class="bk-input" id="f_hours" name="hire_hours" type="text"
+                 inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="e.g. 4 hours (min. 4)"
+                 data-autocomplete="fHoursDrop" data-suggestions="duration" required>
+          <div class="bk-autocomplete" id="fHoursDrop" role="listbox" aria-label="Select duration"></div>
+        </div>
+      </div>
+
+      <div class="fg3" style="margin-top:20px">
+        <div class="bk-field">
+          <label class="bk-label" id="f_dateLbl">Travel Date *</label>
+          <div class="dp-wrap" data-datepicker data-min="today" tabindex="0" role="combobox" aria-haspopup="dialog"
+              aria-expanded="false" aria-labelledby="f_dateLbl" aria-required="true">
+            <div class="dp-display" aria-live="polite"></div>
+            <input type="hidden" class="dp-value" id="f_date" name="travel_date" required>
+            <div class="dp-drop" role="dialog" aria-label="Choose travel date"></div>
+          </div>
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" id="fTimeLbl">Arrival Time *</label>
+          <div class="tp-wrap" data-timepicker role="combobox" aria-haspopup="listbox"
+              aria-expanded="false" aria-labelledby="fTimeLbl" tabindex="0" aria-required="true">
+              <div class="tp-display" aria-live="polite"></div>
+              <input type="hidden" class="tp-value" id="f_time" name="travel_time" required>
+              <div class="tp-drop" role="listbox" aria-label="Select arrival time"></div>
+            </div>
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" for="f_flight">Flight Number</label>
+          <input class="bk-input" id="f_flight" name="flight_number" type="text"
+                 placeholder="e.g. FR1234" autocomplete="off">
+        </div>
+      </div>
+
+      <!-- RETURN JOURNEY (not applicable to Hourly Hire — hidden via JS) -->
+      <div class="fg3" id="returnRow" style="margin-top:20px; align-items:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px">
+        <div class="bk-field">
+          <label class="bk-label" id="f_returnLbl">Return Journey?</label>
+          <div class="cs-wrap" data-customselect tabindex="0" role="combobox" aria-haspopup="listbox"
+              aria-expanded="false" aria-labelledby="f_returnLbl">
+            <div class="cs-display" aria-live="polite"></div>
+            <select class="cs-native" id="f_return" name="return_journey" tabindex="-1" aria-hidden="true">
+              <option value="Yes" selected>Yes</option>
+              <option value="No">No</option>
+            </select>
+            <div class="cs-drop" role="listbox" aria-label="Select return journey option"></div>
+          </div>
+          <p class="field-note" id="f_returnNote">Selecting "No" means you'll miss out on the 10% return discount.</p>
+        </div>
+      </div>
+      <div class="fg3" id="returnDetails" style="display:grid; margin-top:20px; background:rgba(0,0,0,0.2); padding:20px; border-radius:12px;">
+        <div class="bk-field">
+          <label class="bk-label" id="f_return_dateLbl">Return Date *</label>
+          <div class="dp-wrap" data-datepicker data-min="today" data-min-linked="f_date" tabindex="0" role="combobox" aria-haspopup="dialog"
+              aria-expanded="false" aria-labelledby="f_return_dateLbl" aria-required="true">
+            <div class="dp-display" aria-live="polite"></div>
+            <input type="hidden" class="dp-value" id="f_return_date" name="return_date" required>
+            <div class="dp-drop" role="dialog" aria-label="Choose return date"></div>
+          </div>
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" id="f_return_timeLbl">Return Time *</label>
+          <div class="tp-wrap" data-timepicker role="combobox" aria-haspopup="listbox"
+              aria-expanded="false" tabindex="0" aria-labelledby="f_return_timeLbl" aria-required="true">
+              <div class="tp-display" aria-live="polite"></div>
+              <input type="hidden" class="tp-value" id="f_return_time" name="return_time" required>
+              <div class="tp-drop" role="listbox" aria-label="Select return time"></div>
+            </div>
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" for="f_return_flight">Return Flight Number</label>
+          <input class="bk-input" id="f_return_flight" name="return_flight_number" type="text"
+                 placeholder="e.g. FR1234" autocomplete="off">
+        </div>
+      </div>
+
+      <!-- PASSENGERS & LUGGAGE -->
+      <p class="fsec"><span class="fsec-num">4</span>Passengers &amp; Luggage</p>
+      <div class="fg2">
+        <div class="bk-field">
+          <label class="bk-label" id="f_paxLbl">Passengers *</label>
+          <div class="cs-wrap" data-customselect tabindex="0" role="combobox" aria-haspopup="listbox"
+              aria-expanded="false" aria-labelledby="f_paxLbl" aria-required="true">
+            <div class="cs-display" aria-live="polite"></div>
+            <select class="cs-native" id="f_pax" name="passengers" tabindex="-1" aria-hidden="true" required>
+              <option value="" disabled selected>Select</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option>
+              <option>9</option><option>10</option><option>11</option><option>12</option>
+              <option>13</option><option>14</option><option>15</option><option>16</option>
+              <option>17</option><option>18</option><option>19</option><option>20</option>
+              <option>21</option><option>22</option><option>23</option><option>24</option>
+              <option>25</option><option>26</option><option>27</option><option>28</option>
+              <option>29</option><option>30</option><option value="30+">30+</option>
+            </select>
+            <div class="cs-drop" role="listbox" aria-label="Select passenger count"></div>
+          </div>
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" id="f_childLbl">Child Seats</label>
+          <div class="cs-wrap" data-customselect tabindex="0" role="combobox" aria-haspopup="listbox"
+              aria-expanded="false" aria-labelledby="f_childLbl">
+            <div class="cs-display" aria-live="polite"></div>
+            <select class="cs-native" id="f_child" name="child_seats" tabindex="-1" aria-hidden="true">
+              <option value="None">None needed</option>
+              <option value="1 infant (0-13kg)">1 &times; infant (0&ndash;13 kg)</option>
+              <option value="1 toddler (9-18kg)">1 &times; toddler (9&ndash;18 kg)</option>
+              <option value="1 booster (15-36kg)">1 &times; booster (15&ndash;36 kg)</option>
+              <option value="Multiple — see notes">Multiple &mdash; specify in notes</option>
+            </select>
+            <div class="cs-drop" role="listbox" aria-label="Select child seats"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="fg2" style="margin-top:20px;">
+        <div class="bk-field">
+          <label class="bk-label" id="f_suitcasesLbl">Suitcases (max 22kg each) *</label>
+          <div class="cs-wrap" data-customselect tabindex="0" role="combobox" aria-haspopup="listbox"
+              aria-expanded="false" aria-labelledby="f_suitcasesLbl" aria-required="true">
+            <div class="cs-display" aria-live="polite"></div>
+            <select class="cs-native" id="f_suitcases" name="suitcases" tabindex="-1" aria-hidden="true">
+              <option value="" disabled selected>Select</option>
+              <option value="0">0</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option value="7+">7+</option>
+            </select>
+            <div class="cs-drop" role="listbox" aria-label="Select number of suitcases"></div>
+          </div>
+        </div>
+        <div class="bk-field">
+          <label class="bk-label" id="f_carryonsLbl">Carry-on Bags (max 7kg each) *</label>
+          <div class="cs-wrap" data-customselect tabindex="0" role="combobox" aria-haspopup="listbox"
+              aria-expanded="false" aria-labelledby="f_carryonsLbl" aria-required="true">
+            <div class="cs-display" aria-live="polite"></div>
+            <select class="cs-native" id="f_carryons" name="carry_on_bags" tabindex="-1" aria-hidden="true">
+              <option value="" disabled selected>Select</option>
+              <option value="0">0</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option value="7+">7+</option>
+            </select>
+            <div class="cs-drop" role="listbox" aria-label="Select number of carry-on bags"></div>
+          </div>
+        </div>
+      </div>
+      <!-- VEHICLE PREFERENCE -->
+      <p class="fsec"><span class="fsec-num">5</span>Vehicle Preference</p>
+      <div class="vehicle-options" id="vehicleOptions">
+        <label class="vehicle-opt selected" data-vehicle="standard">
+          <input type="radio" name="vehicle_preference" value="Standard Sedan" checked>
+          <div class="vehicle-opt-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06060F" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <picture><source type="image/avif" srcset="/assets/images/fleet-standard-sedan-480w.avif 480w, /assets/images/fleet-standard-sedan-800w.avif 800w, /assets/images/fleet-standard-sedan.avif 1024w" sizes="(max-width: 600px) 28vw, 150px"><source type="image/webp" srcset="/assets/images/fleet-standard-sedan-480w.webp 480w, /assets/images/fleet-standard-sedan-800w.webp 800w, /assets/images/fleet-standard-sedan.webp 1024w" sizes="(max-width: 600px) 28vw, 150px"><img fetchpriority="high" class="vehicle-opt-img" src="/assets/images/fleet-standard-sedan.webp" alt="Malaga VIP Transfers standard sedan budget-friendly private airport transfer fleet" width="320" height="200"></picture>
+          <div class="vehicle-opt-info">
+            <div class="vehicle-opt-name">Standard Sedan</div>
+            <div class="vehicle-opt-meta"><span>Up to 3 pax</span><span>2 suitcases, 2 carry-ons</span></div>
+          </div>
+        </label>
+        <label class="vehicle-opt" data-vehicle="sedan">
+          <input type="radio" name="vehicle_preference" value="E-Class Sedan">
+          <div class="vehicle-opt-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06060F" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <picture><source type="image/avif" srcset="/assets/images/fleet-mercedes-e-class-480w.avif 480w, /assets/images/fleet-mercedes-e-class-800w.avif 800w, /assets/images/fleet-mercedes-e-class.avif 1376w" sizes="(max-width: 600px) 28vw, 150px"><source type="image/webp" srcset="/assets/images/fleet-mercedes-e-class-480w.webp 480w, /assets/images/fleet-mercedes-e-class-800w.webp 800w, /assets/images/fleet-mercedes-e-class.webp 1376w" sizes="(max-width: 600px) 28vw, 150px"><img class="vehicle-opt-img" src="/assets/images/fleet-mercedes-e-class.webp" alt="Malaga VIP Transfers Mercedes E-Class sedan private airport transfer fleet" width="320" height="200" loading="lazy"></picture>
+          <div class="vehicle-opt-info">
+            <div class="vehicle-opt-name">E-Class Sedan</div>
+            <div class="vehicle-opt-meta"><span>Up to 3 pax</span><span>2 suitcases, 2 carry-ons</span></div>
+          </div>
+        </label>
+        <label class="vehicle-opt" data-vehicle="luxury">
+          <input type="radio" name="vehicle_preference" value="S-Class Luxury">
+          <div class="vehicle-opt-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06060F" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <picture><source type="image/avif" srcset="/assets/images/fleet-mercedes-s-class-480w.avif 480w, /assets/images/fleet-mercedes-s-class-800w.avif 800w, /assets/images/fleet-mercedes-s-class.avif 1376w" sizes="(max-width: 600px) 28vw, 150px"><source type="image/webp" srcset="/assets/images/fleet-mercedes-s-class-480w.webp 480w, /assets/images/fleet-mercedes-s-class-800w.webp 800w, /assets/images/fleet-mercedes-s-class.webp 1376w" sizes="(max-width: 600px) 28vw, 150px"><img class="vehicle-opt-img" src="/assets/images/fleet-mercedes-s-class.webp" alt="Malaga VIP Transfers Mercedes S-Class executive luxury sedan transfer fleet" width="320" height="200" loading="lazy"></picture>
+          <div class="vehicle-opt-info">
+            <div class="vehicle-opt-name">S-Class Luxury</div>
+            <div class="vehicle-opt-meta"><span>Up to 3 pax</span><span>2 suitcases, 2 carry-ons</span></div>
+          </div>
+        </label>
+        <label class="vehicle-opt" data-vehicle="mpv">
+          <input type="radio" name="vehicle_preference" value="V-Class MPV">
+          <div class="vehicle-opt-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06060F" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <picture><source type="image/avif" srcset="/assets/images/fleet-mercedes-v-class-480w.avif 480w, /assets/images/fleet-mercedes-v-class-800w.avif 800w, /assets/images/fleet-mercedes-v-class.avif 1376w" sizes="(max-width: 600px) 28vw, 150px"><source type="image/webp" srcset="/assets/images/fleet-mercedes-v-class-480w.webp 480w, /assets/images/fleet-mercedes-v-class-800w.webp 800w, /assets/images/fleet-mercedes-v-class.webp 1376w" sizes="(max-width: 600px) 28vw, 150px"><img class="vehicle-opt-img" src="/assets/images/fleet-mercedes-v-class.webp" alt="Malaga VIP Transfers Mercedes V-Class minivan group airport transfer fleet" width="320" height="200" loading="lazy"></picture>
+          <div class="vehicle-opt-info">
+            <div class="vehicle-opt-name">V-Class MPV</div>
+            <div class="vehicle-opt-meta"><span>Up to 7 pax</span><span>7 suitcases, 7 carry-ons</span></div>
+          </div>
+        </label>
+        <label class="vehicle-opt" data-vehicle="minicoach">
+          <input type="radio" name="vehicle_preference" value="Mercedes Minibus">
+          <div class="vehicle-opt-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06060F" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <picture><source type="image/avif" srcset="/assets/images/fleet-mercedes-minibus-480w.avif 480w, /assets/images/fleet-mercedes-minibus-800w.avif 800w, /assets/images/fleet-mercedes-minibus.avif 1024w" sizes="(max-width: 600px) 28vw, 150px"><source type="image/webp" srcset="/assets/images/fleet-mercedes-minibus-480w.webp 480w, /assets/images/fleet-mercedes-minibus-800w.webp 800w, /assets/images/fleet-mercedes-minibus.webp 1024w" sizes="(max-width: 600px) 28vw, 150px"><img class="vehicle-opt-img" src="/assets/images/fleet-mercedes-minibus.webp" alt="Malaga VIP Transfers Mercedes minibus large group airport transfer fleet" width="320" height="200" loading="lazy"></picture>
+          <div class="vehicle-opt-info">
+            <div class="vehicle-opt-name">Mercedes Minibus</div>
+            <div class="vehicle-opt-meta"><span>Up to 19 pax</span></div>
+          </div>
+        </label>
+        <label class="vehicle-opt" data-vehicle="coach">
+          <input type="radio" name="vehicle_preference" value="Luxury Coach">
+          <div class="vehicle-opt-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06060F" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <picture><source type="image/avif" srcset="/assets/images/fleet-30-seater-bus-480w.avif 480w, /assets/images/fleet-30-seater-bus-800w.avif 800w, /assets/images/fleet-30-seater-bus.avif 1024w" sizes="(max-width: 600px) 28vw, 150px"><source type="image/webp" srcset="/assets/images/fleet-30-seater-bus-480w.webp 480w, /assets/images/fleet-30-seater-bus-800w.webp 800w, /assets/images/fleet-30-seater-bus.webp 1024w" sizes="(max-width: 600px) 28vw, 150px"><img class="vehicle-opt-img vehicle-opt-img--coach" src="/assets/images/fleet-30-seater-bus.webp" alt="Malaga VIP Transfers luxury coach large group and event transfer fleet" width="320" height="200" loading="lazy"></picture>
+          <div class="vehicle-opt-info">
+            <div class="vehicle-opt-name">Luxury Coach</div>
+            <div class="vehicle-opt-meta"><span>Up to 30 pax</span></div>
+          </div>
+        </label>
+      </div>
+
+      <!-- NOTES -->
+      <p class="fsec"><span class="fsec-num">6</span>Additional Information</p>
+      <div class="bk-field">
+        <label class="bk-label" for="f_notes">Special Requests or Notes</label>
+        <textarea class="bk-input" id="f_notes" name="special_requests" rows="4"
+                  style="resize:vertical;line-height:1.65;padding-top:10px"
+                  placeholder="Extra stops, accessibility requirements, return journey details, hourly hire route preferences..."></textarea>
+      </div>
+
+      <p class="privacy-note">
+        By submitting this form you agree to our <a href="/privacy/">Privacy Policy</a>. Your details are used solely to arrange and confirm your transfer.
+      </p>
+
+      <!-- Mobile-only price (hidden on desktop, visible on mobile below 1000px) -->
+      <div id="mobilePriceBar" style="display:none; background: rgba(201,168,76,0.1); border-left: 3px solid var(--gold); padding: 20px; margin-top: 30px; justify-content: space-between; align-items: center; border-radius: 4px;">
+        <div style="font-size:1.1rem; color:var(--ivory); font-weight:600;">Estimated Price:</div>
+        <div id="estPriceMobile" style="font-size:1.6rem; color:var(--gold); font-weight:700; font-family:var(--sans);">Price on request</div>
+      </div>
+
+      <button type="submit" data-submit class="btn btn-gold btn-lg btn-block" style="margin-top:22px;justify-content:center">
+        Send Booking Request
+      </button>
+      <div data-msg class="form-msg" role="alert" aria-live="assertive" style="margin-top:12px"></div>
+
+    </form>
+  </div>
+
+  <!-- ═══ RIGHT: STICKY PRICE SIDEBAR ═══ -->
+  <aside class="price-sidebar" id="priceSidebar">
+    <!-- Price Card -->
+    <div class="price-card">
+      <p class="price-card-title">Estimated Price</p>
+      <div class="price-value price-value--pending" id="estPriceDisplay">Price on request</div>
+      <p class="price-subtitle" id="pdSubtitle">Per vehicle, one way</p>
+
+      <div id="priceDetails">
+        <div class="price-detail-row">
+          <span class="price-detail-label">Route</span>
+          <span class="price-detail-value" id="pdRoute">—</span>
+        </div>
+        <div class="price-detail-row">
+          <span class="price-detail-label">Vehicle</span>
+          <span class="price-detail-value" id="pdVehicle">Standard Sedan</span>
+        </div>
+        <div class="price-detail-row">
+          <span class="price-detail-label">Passengers</span>
+          <span class="price-detail-value" id="pdPax">—</span>
+        </div>
+      </div>
+
+      <button type="submit" form="bookForm" data-submit class="btn btn-gold btn-block" style="margin-top:20px;justify-content:center;font-size:.6rem">
+        Send Booking Request
+      </button>
+    </div>
+
+    <!-- Vehicle Preview -->
+    <div class="vehicle-preview" id="vehiclePreview">
+      <img loading="lazy" class="vehicle-preview-img" id="vpImg" src="/assets/images/fleet-standard-sedan.webp" alt="Malaga VIP Transfers standard sedan budget-friendly private airport transfer fleet" width="340" height="180">
+      <div class="vehicle-preview-info">
+        <div class="vehicle-preview-name" id="vpName">Standard Sedan</div>
+        <div class="vehicle-preview-specs">
+          <span id="vpPax">👤 Up to 3 pax</span>
+          <span id="vpBags">🧳 2 suitcases, 2 carry-ons</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<script defer src="/assets/js/config.js"></script>
+<script defer src="/assets/js/prices.js"></script>
+<script defer src="/assets/js/locations.js"></script>
+<script defer src="/assets/js/ui.js"></script>
+<script defer src="/assets/js/components.js"></script>
+<script defer src="/assets/js/phone-codes.js"></script>
+<script defer src="/assets/js/booking.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Set min date
+  var dateEl = document.getElementById("f_date");
+  if (dateEl) dateEl.min = new Date().toISOString().split("T")[0];
+
+  var fromInput = document.getElementById("f_from");
+  var toInput = document.getElementById("f_to");
+  var AGP_LABEL = "Malaga Airport (AGP)";
+
+  // Pre-fill from URL params
+  var p = new URLSearchParams(location.search);
+  function fill(sel, val) { var el = document.querySelector(sel); if (el && val) { el.value = val; el.dispatchEvent(new Event('change')); } }
+  
+  // LIVE PRICE & TOLL LOGIC
+  var tollRow = document.getElementById("tollRow");
+  var tollSelect = document.getElementById("f_toll");
+  var paxSelect = document.getElementById("f_pax");
+  var suitcasesSelect = document.getElementById("f_suitcases");
+  var carryonsSelect = document.getElementById("f_carryons");
+  var estPriceDisplay = document.getElementById("estPriceDisplay");
+  var estPriceMobile = document.getElementById("estPriceMobile");
+  var pdSubtitle = document.getElementById("pdSubtitle");
+  var pdRoute = document.getElementById("pdRoute");
+  var pdVehicle = document.getElementById("pdVehicle");
+  var pdPax = document.getElementById("pdPax");
+  var returnSelect = document.getElementById("f_return");
+  var returnDetails = document.getElementById("returnDetails");
+  var returnNote = document.getElementById("f_returnNote");
+
+  // Discount for booking the return journey in the same request, as a
+  // fraction off the combined (2x one-way) total. Adjust this one number
+  // if the discounted rate changes.
+  var RETURN_DISCOUNT = 0.10;
+
+  // ═══ VEHICLE OPTIONS: data + passenger-based filtering ═══
+  // Declared up here (not just further down, near the click handler) so
+  // the Passengers field's change listener can safely call
+  // updateVehicleVisibility() the moment it fires — including when a
+  // ?pax= URL param pre-fills the field before the rest of this script
+  // below has had a chance to run.
+  var vehicleOpts = document.querySelectorAll('.vehicle-opt');
+  var vpImg = document.getElementById('vpImg');
+  var vpName = document.getElementById('vpName');
+  var vpPax = document.getElementById('vpPax');
+  var vpBags = document.getElementById('vpBags');
+
+  var vehicleData = {
+    sedan:    { name: 'Mercedes E-Class Sedan', img: '/assets/images/fleet-mercedes-e-class.webp', pax: 'Up to 3 pax', bags: '2 suitcases, 2 carry-ons', cap: 3, bagCap: 2 },
+    luxury:   { name: 'Mercedes S-Class Luxury', img: '/assets/images/fleet-mercedes-s-class.webp', pax: 'Up to 3 pax', bags: '2 suitcases, 2 carry-ons', cap: 3, bagCap: 2 },
+    standard: { name: 'Standard Sedan', img: '/assets/images/fleet-standard-sedan.webp', pax: 'Up to 3 pax', bags: '2 suitcases, 2 carry-ons', cap: 3, bagCap: 2 },
+    mpv:      { name: 'Mercedes V-Class MPV', img: '/assets/images/fleet-mercedes-v-class.webp', pax: 'Up to 7 pax', bags: '7 suitcases, 7 carry-ons', cap: 7, bagCap: 7 },
+    minicoach:{ name: 'Mercedes Minibus', img: '/assets/images/fleet-mercedes-minibus.webp', pax: 'Up to 19 pax', cap: 19 },
+    coach:    { name: 'Luxury Coach', img: '/assets/images/fleet-30-seater-bus.webp', pax: 'Up to 30 pax', cap: 30 }
+  };
+  // bagCap is the higher of "suitcases" and "carry-on bags" a vehicle can
+  // fit — sedans/E-Class/S-Class max out at 2 of either, V-Class at 7 of
+  // either; Minibus/Coach have no bagCap here, i.e. no luggage limit for
+  // this form's purposes. "7+" on either field counts as 8 for this
+  // comparison, so it correctly exceeds V-Class's cap of 7.
+  function parseLuggageCount(v) {
+    if (!v) return 0;
+    var s = String(v);
+    return s.indexOf('+') !== -1 ? (parseInt(s) || 0) + 1 : (parseInt(s) || 0);
+  }
+
+  // Applies a vehicle option's data to the selected state, the sidebar
+  // preview and the price-detail row. Shared by the click handler further
+  // below and by the auto-reselect that runs when filtering hides the
+  // vehicle that was previously chosen.
+  function selectVehicle(opt) {
+    vehicleOpts.forEach(function(o) { o.classList.remove('selected'); });
+    opt.classList.add('selected');
+    opt.querySelector('input[type="radio"]').checked = true;
+
+    var data = vehicleData[opt.dataset.vehicle];
+    if(data && vpImg) {
+      vpImg.src = data.img;
+      vpName.textContent = data.name;
+      vpPax.textContent = '👤 ' + data.pax;
+      if (vpBags) {
+        if (data.bags) { vpBags.textContent = '🧳 ' + data.bags; vpBags.style.display = ''; }
+        else { vpBags.style.display = 'none'; }
+      }
+      if (pdVehicle) pdVehicle.textContent = data.name.replace('Mercedes ', '');
+    }
+  }
+
+  // Hides vehicles that can't seat the chosen passenger count, or can't
+  // fit the chosen luggage — e.g. choosing 4 passengers hides the 3-seat
+  // sedans; choosing 3+ suitcases or carry-ons does the same (sedans cap
+  // at 2 of either); choosing "7+" of either additionally hides V-Class
+  // (caps at 7), leaving only Minibus and Coach. If the currently-selected
+  // vehicle no longer fits, the first vehicle that still does is
+  // auto-selected.
+  function updateVehicleVisibility() {
+    var pax = parseInt(paxSelect.value) || 0;
+    var suitcases = suitcasesSelect ? parseLuggageCount(suitcasesSelect.value) : 0;
+    var carryons  = carryonsSelect  ? parseLuggageCount(carryonsSelect.value)  : 0;
+    var luggage = Math.max(suitcases, carryons);
+    var selectedOpt = null;
+    var firstVisible = null;
+    vehicleOpts.forEach(function(opt) {
+      var data = vehicleData[opt.dataset.vehicle];
+      var paxFits = !pax || !data || data.cap >= pax;
+      var bagsFit = !luggage || !data || data.bagCap === undefined || data.bagCap >= luggage;
+      var fits = paxFits && bagsFit;
+      opt.style.display = fits ? '' : 'none';
+      if (fits && !firstVisible) firstVisible = opt;
+      if (opt.classList.contains('selected')) selectedOpt = opt;
+    });
+    if (selectedOpt && selectedOpt.style.display === 'none' && firstVisible) {
+      selectVehicle(firstVisible);
+    }
+  }
+
+  function showPrice(html, subtitle, isReturn) {
+    estPriceDisplay.classList.remove('price-value--pending');
+    if (pdSubtitle) {
+      pdSubtitle.textContent = subtitle || 'Per vehicle, one way';
+      pdSubtitle.classList.toggle('price-subtitle--gold', !!isReturn);
+    }
+    estPriceDisplay.classList.remove('updating');
+    void estPriceDisplay.offsetWidth; // trigger reflow
+    estPriceDisplay.classList.add('updating');
+    estPriceDisplay.innerHTML = html;
+    if (estPriceMobile) estPriceMobile.innerHTML = html;
+  }
+
+  function showPricePending() {
+    estPriceDisplay.classList.add('price-value--pending');
+    estPriceDisplay.innerHTML = 'Price on request';
+    if (estPriceMobile) estPriceMobile.innerHTML = 'Price on request';
+    if (pdSubtitle) {
+      pdSubtitle.textContent = "We'll confirm your price after you submit this enquiry.";
+      pdSubtitle.classList.remove('price-subtitle--gold');
+    }
+  }
+
+  function getSlug(destName) {
+    if(!destName) return null;
+    var slug = "malaga-airport-to-" + destName.toLowerCase().replace(/ /g, '-').replace(/'/g, "").replace(/\(/g, "").replace(/\)/g, "").replace(/\//g, "-");
+    slug = slug.replace(/-+/g, '-');
+    return slug;
+  }
+  
+  function updateLivePrice() {
+    var type = hiddenType.value;
+
+    // Passengers applies to every transfer type, so update it before
+    // the intracity branch below has a chance to return early and
+    // skip it — otherwise Hourly Hire never reflects the selected count.
+    var pax = parseInt(paxSelect.value) || 0;
+    pdPax.textContent = pax ? pax + ' passenger' + (pax > 1 ? 's' : '') : '—';
+
+    if(type === 'intracity') {
+      showPrice('Hourly Rate');
+      tollRow.style.display = 'none';
+      pdRoute.textContent = 'Hourly Hire';
+      return;
+    }
+    
+    var fFrom = fromInput.value;
+    var fTo = toInput.value;
+    var destName = (fFrom === "Malaga Airport (AGP)") ? fTo : fFrom;
+    var slug = getSlug(destName);
+    
+    // Update route display
+    if(fFrom && fTo) {
+      pdRoute.textContent = fFrom.replace(' (AGP)','') + ' → ' + fTo.replace(' (AGP)','');
+    }
+    
+    if(!slug || !PRICES || !PRICES[slug]) {
+      showPricePending();
+      tollRow.style.display = 'none';
+      return;
+    }
+    
+    var route = PRICES[slug];
+    
+    // Check tolls
+    if(route.hasTolls) {
+      tollRow.style.display = '';
+      var currentToll = tollSelect.value;
+      var optionsHTML = '<option value="none">No Toll Road (Standard Route)</option>';
+      if(route.tolls.calahonda) optionsHTML += '<option value="calahonda">AP-7 Calahonda Toll (Faster)</option>';
+      if(route.tolls.marbella) optionsHTML += '<option value="marbella">AP-7 Marbella Toll (Faster)</option>';
+      if(route.tolls.estepona) optionsHTML += '<option value="estepona">AP-7 Estepona Toll (Faster)</option>';
+      tollSelect.innerHTML = optionsHTML;
+      
+      var exists = false;
+      for(var i=0; i<tollSelect.options.length; i++) {
+        if(tollSelect.options[i].value === currentToll) exists = true;
+      }
+      tollSelect.value = exists ? currentToll : 'none';
+    } else {
+      tollRow.style.display = 'none';
+      tollSelect.innerHTML = '<option value="none" selected>No Toll Road (Standard Route)</option>';
+      tollSelect.value = 'none';
+    }
+    
+    // Calculate Price — driven by whichever vehicle card is selected.
+    // Passenger count only controls which vehicles are selectable (see
+    // updateVehicleVisibility); it no longer picks the price tier directly,
+    // so manually choosing V-Class/Minibus/Coach always shows that
+    // vehicle's own flat rate, even for a smaller group.
+    var selectedOpt = document.querySelector('.vehicle-opt.selected');
+    var selectedKey = selectedOpt ? selectedOpt.dataset.vehicle : 'sedan';
+    
+    // E-Class and S-Class are priced as a markup on the base "sedan"
+    // (Standard Sedan) route figure: E-Class +30%, S-Class +50%.
+    // V-Class is priced to always match S-Class exactly. Minibus/Coach
+    // each use their own flat per-route rate.
+    var VEHICLE_PRICE_MAP = {
+      standard:  { dataKey: 'sedan',     mult: 1 },
+      sedan:     { dataKey: 'sedan',     mult: 1.3 },
+      luxury:    { dataKey: 'sedan',     mult: 1.5 },
+      mpv:       { dataKey: 'sedan',     mult: 1.5 },
+      minicoach: { dataKey: 'minicoach', mult: 1 },
+      coach:     { dataKey: 'coach',     mult: 1 }
+    };
+    var vMap = VEHICLE_PRICE_MAP[selectedKey] || VEHICLE_PRICE_MAP.sedan;
+    
+    // Update vehicle display
+    var vNames = { sedan:'E-Class Sedan', luxury:'S-Class Luxury', standard:'Standard Sedan', mpv:'V-Class MPV', minicoach:'Mercedes Minibus', coach:'Luxury Coach' };
+    pdVehicle.textContent = vNames[selectedKey] || selectedKey;
+    
+    var basePrice = null;
+    var tPref = tollSelect.value;
+    
+    if(tPref === 'none' || !route.tolls || !route.tolls[tPref] || route.tolls[tPref][vMap.dataKey] === 'null') {
+      basePrice = route[vMap.dataKey];
+    } else {
+      basePrice = route.tolls[tPref][vMap.dataKey];
+    }
+    
+    var price = (basePrice && basePrice !== 'null') ? Math.round(basePrice * vMap.mult) : null;
+    
+    if(price) {
+      if(returnSelect && returnSelect.value === 'Yes') {
+        var roundTrip = Math.round(price * 2 * (1 - RETURN_DISCOUNT));
+        showPrice('&euro;' + roundTrip, 'Per vehicle, round trip (' + Math.round(RETURN_DISCOUNT * 100) + '% return discount applied)', true);
+      } else {
+        showPrice('&euro;' + price);
+      }
+    } else {
+      showPricePending();
+    }
+  }
+
+  // Keep the return-journey detail fields and the discount reminder in
+  // sync with the Yes/No toggle. Disabling (not just hiding) them when
+  // the answer is "No" also keeps a stale date/time/flight number from
+  // a previous "Yes" out of the submission — and re-enabling them here
+  // is what undoes the disabling that setType()'s Hourly Hire branch
+  // below applies, so switching back to any other tab restores them.
+  function syncReturnUI() {
+    var isYes = !returnSelect || returnSelect.value === 'Yes';
+    if (returnDetails) returnDetails.style.display = isYes ? 'grid' : 'none';
+    setRowEnabled(returnDetails, isYes);
+    if (returnNote) returnNote.classList.toggle('show', !isYes);
+  }
+
+  if(fromInput) fromInput.addEventListener("change", updateLivePrice);
+  if(toInput) toInput.addEventListener("change", updateLivePrice);
+  if(tollSelect) tollSelect.addEventListener("change", updateLivePrice);
+  if(paxSelect) paxSelect.addEventListener("change", function() { updateVehicleVisibility(); updateLivePrice(); });
+  if(suitcasesSelect) suitcasesSelect.addEventListener("change", function() { updateVehicleVisibility(); updateLivePrice(); });
+  if(carryonsSelect) carryonsSelect.addEventListener("change", function() { updateVehicleVisibility(); updateLivePrice(); });
+  if(returnSelect) returnSelect.addEventListener("change", function() { syncReturnUI(); updateLivePrice(); });
+  syncReturnUI();
+
+  if (p.get("from"))    fill("[name=pickup_location]", p.get("from"));
+  if (p.get("to"))      fill("[name=destination]",     p.get("to"));
+  if (p.get("date"))    fill("[name=travel_date]",      p.get("date"));
+  if (p.get("time"))    fill("[name=travel_time]",      p.get("time"));
+  if (p.get("pax"))     fill("[name=passengers]",       p.get("pax"));
+  if (p.get("hours"))   fill("[name=hire_hours]",       p.get("hours"));
+
+  // Transfer type tab switching
+  var tabs       = document.querySelectorAll(".type-tab");
+  var hiddenType = document.getElementById("hiddenType");
+  var destRow    = document.getElementById("destRow");
+  var hoursRow   = document.getElementById("hoursRow");
+  var intNote    = document.getElementById("intracityNote");
+  var timeLbl    = document.getElementById("fTimeLbl");
+  var returnRow  = document.getElementById("returnRow");
+
+  // destRow's "pickup_location" and hoursRow's "pickup_location" share a
+  // name (both feed the same "From" line), so only one of the two rows
+  // can be enabled at a time — otherwise FormData would collect both
+  // and the hidden, empty one can silently overwrite the real value.
+  function setRowEnabled(row, enabled) {
+    if (!row) return;
+    row.querySelectorAll("input, select, textarea").forEach(function(el) {
+      el.disabled = !enabled;
+    });
+  }
+
+  function setType(val) {
+    tabs.forEach(function(t) {
+      t.classList.toggle("active", t.dataset.tt === val);
+      t.setAttribute("aria-selected", t.dataset.tt === val);
+    });
+    hiddenType.value = val;
+    destRow.style.display  = val === "intracity" ? "none" : "";
+    hoursRow.style.display = val === "intracity" ? "" : "none";
+    setRowEnabled(destRow,  val !== "intracity");
+    setRowEnabled(hoursRow, val === "intracity");
+    intNote.style.display  = val === "intracity" ? "" : "none";
+    // Hourly Hire has a driver at your disposal the whole time — no
+    // separate "return leg" to arrange, so this section is irrelevant
+    // for that tab. syncReturnUI() (Yes/No-driven) governs it for
+    // every other transfer type.
+    if (returnRow) returnRow.style.display = val === "intracity" ? "none" : "";
+    if (val === "intracity") {
+      if (returnDetails) returnDetails.style.display = "none";
+      setRowEnabled(returnRow, false);
+      setRowEnabled(returnDetails, false);
+    } else {
+      setRowEnabled(returnRow, true);
+      syncReturnUI();
+    }
+
+    // Removes the airport value from a field, but only when this script
+    // put it there itself (dataset.prefilled) and it's still untouched —
+    // a location the visitor actually typed or picked is never cleared.
+    function clearAutoAGP(input) {
+      if (input && input.dataset.prefilled === "true" && input.value === AGP_LABEL) {
+        input.value = "";
+        input.dataset.prefilled = "false";
+      }
+    }
+
+    if (val === "pickup") {
+      // Pickup always starts at the airport, so "From" is fixed to it.
+      // If "To" is only holding the airport value Drop-off left behind,
+      // clear it; a real destination the visitor typed stays as is.
+      clearAutoAGP(toInput);
+      if (fromInput) { fromInput.value = AGP_LABEL; fromInput.dataset.prefilled = "true"; }
+      if (timeLbl) timeLbl.textContent = "Arrival Time *";
+    } else if (val === "dropoff") {
+      // Drop-off always ends at the airport, so "To" is fixed to it.
+      // If "From" is only holding the airport value Pickup left behind,
+      // clear it; a real pickup address the visitor typed stays as is.
+      clearAutoAGP(fromInput);
+      if (toInput) { toInput.value = AGP_LABEL; toInput.dataset.prefilled = "true"; }
+      if (timeLbl) timeLbl.textContent = "Departure Time *";
+    } else {
+      // Intercity / Hourly Hire have no airport default on either side —
+      // clear the airport value only if this script auto-filled it.
+      clearAutoAGP(fromInput);
+      clearAutoAGP(toInput);
+      if (timeLbl) timeLbl.textContent = "Departure / Start Time *";
+    }
+    
+    updateLivePrice();
+  }
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener("click", function() { setType(tab.dataset.tt); });
+  });
+
+  // Handle type from URL param
+  if (p.get("type")) setType(p.get("type"));
+  else setType("pickup");
+  
+  // ═══ VEHICLE SELECTOR: click handling ═══
+  // (Data, selectVehicle() and updateVehicleVisibility() are declared
+  // earlier, alongside the other price/passenger variables.)
+  vehicleOpts.forEach(function(opt) {
+    opt.addEventListener('click', function() { selectVehicle(opt); updateLivePrice(); });
+  });
+  // Sync the sidebar preview card to whichever vehicle is marked
+  // "selected" in the HTML, so the default vehicle only ever needs to
+  // be changed in one place (the .vehicle-opt.selected/checked markup
+  // above) instead of also being kept in sync by hand down here.
+  var defaultOpt = document.querySelector('.vehicle-opt.selected') || vehicleOpts[0];
+  if (defaultOpt) selectVehicle(defaultOpt);
+  updateVehicleVisibility();
+  
+  // ═══ RESPONSIVE: Show mobile price bar on small screens ═══
+  var mobilePriceBar = document.getElementById('mobilePriceBar');
+  var priceSidebar = document.getElementById('priceSidebar');
+  function handleResize() {
+    if(window.innerWidth <= 1000) {
+      if(mobilePriceBar) mobilePriceBar.style.display = 'flex';
+      if(priceSidebar) priceSidebar.style.display = 'none';
+    } else {
+      if(mobilePriceBar) mobilePriceBar.style.display = 'none';
+      if(priceSidebar) priceSidebar.style.display = '';
+    }
+  }
+  handleResize();
+  window.addEventListener('resize', handleResize);
+});
+</script>
+<footer class="ftr">
+  <div class="ftr-top">
+    <div class="ftr-brand">
+      <a href="/"><img src="/assets/images/logo-light.svg" alt="Malaga VIP Transfers" width="320" height="120"/></a>
+      <p>Premium private car transfers across Malaga, the Costa del Sol, and Andalusia.</p>
+    </div>
+    <div class="ftr-col"><h5>Navigate</h5><ul class="ftr-links">
+      <li><a href="/">Home</a></li><li><a href="/services/">Services</a></li>
+      <li><a href="/destinations/">Destinations</a></li><li><a href="/blog/">Blog</a></li>
+      <li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li>
+      <li><a href="/book/">Book a Transfer</a></li>
+    </ul></div>
+    <div class="ftr-col"><h5>Top Routes</h5><ul class="ftr-links">
+      <li><a href="/malaga-airport-to-marbella/">Airport → Marbella</a></li>
+      <li><a href="/malaga-airport-to-nerja/">Airport → Nerja</a></li>
+      <li><a href="/malaga-airport-to-granada/">Airport → Granada</a></li>
+      <li><a href="/malaga-airport-to-ronda/">Airport → Ronda</a></li>
+      <li><a href="/destinations/">All Destinations →</a></li>
+    </ul></div>
+    <div class="ftr-col"><h5>Contact</h5>
+      <p class="ftr-contact-row"><a href="/contact/">Contact Us</a></p>
+      <p style="font-size:.74rem;color:rgba(255,255,255,.28);line-height:1.75;margin-top:14px">Malaga, Andalusia, Spain<br/>Licensed private hire operator</p>
+    </div>
+  </div>
+  <div class="ftr-bottom">
+    <p>© <span id="ftrYear">2026</span> Malaga VIP Transfers. All rights reserved.</p>
+    <div class="ftr-bottom-links"><a href="/privacy/">Privacy Policy</a></div>
+  </div>
+</footer>
+</body>
+</html>
+
+
+
+
